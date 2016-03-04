@@ -58,7 +58,7 @@ User-Agent of the client.
 There are two provided implementations of `org.dspace.seoproxy.AbstractHTMLUnitServlet`. The 
 difference between them is how they decide that the page has finished loading.
 
-## HTMLUnitServlet
+### HTMLUnitServlet
 `org.dspace.seoproxy.HTMLUnitServlet` will just wait for a set amount of time after the 
 page has loaded for AJAX operations to finish, before it takes the snapshot.
 
@@ -81,12 +81,12 @@ wait. The default is 2000ms. e.g.:
  
 You can use this implementation if you're starting out with your own JS app. But it is recommended that you write your own implementation of AbstractHTMLUnitServlet that has some way to determine when to finish based on knowledge of the JS app.
  
- ## DSEmberServlet
+### DSEmberServlet
 `org.dspace.seoproxy.DSEmberServlet` is somewhat optimized to work with the dsember DSpace UI  prototype. It will use knowledge about how the ember works to decide when the page has  finished loading. 
  
  It has no configuration options.
 
-## General
+### General
 Both implementations can set following options for the cache:
 - `maxCacheSize`: the max number of pages in the cache, default 10000
 - `cacheExpireDurationInMinutes`: the number of minutes before a cached page is automatically removed.
